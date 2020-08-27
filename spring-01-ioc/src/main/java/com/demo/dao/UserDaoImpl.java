@@ -1,4 +1,4 @@
-package demo.dao;
+package com.demo.dao;
 
 public class UserDaoImpl implements UserDao {
     public void getUser() {

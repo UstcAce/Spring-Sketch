@@ -1,7 +1,7 @@
-package demo.service;
+package com.demo.service;
 
-import demo.dao.UserDao;
-import demo.dao.UserDaoImpl;
+import com.demo.dao.UserDao;
+import com.demo.dao.UserDaoImpl;
 
 public class UserServiceImpl implements UserService {
     private UserDao userDao = new UserDaoImpl();

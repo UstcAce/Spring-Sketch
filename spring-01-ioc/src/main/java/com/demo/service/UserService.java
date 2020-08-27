@@ -1,4 +1,4 @@
-package demo.service;
+package com.demo.service;
 
 public interface UserService {
     void getUser();
