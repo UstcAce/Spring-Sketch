@@ -19,7 +19,7 @@
 <!--    </bean>-->
 
     <!-- 对应有参构造第三种方式，参数名匹配   -->
-    <bean id="user" class="com.demo.pojo.User" name="user-alias2,user-alias3 user-alias4;user-alias5">
+    <bean id="user" class="com.demo.pojo.User" name="user-alias2,user-alias3 user-alias4;user-alias5,user-alias6">
         <constructor-arg name="name" value="Ace by 有参数构造函数法3"/>
     </bean>
 
