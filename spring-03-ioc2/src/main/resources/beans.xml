@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--对应无参构造函数-->
+<!--    <bean id="user" class="com.demo.pojo.User">-->
+<!--        <property name="name" value="Ace"/>-->
+<!--    </bean>-->
+
+<!-- 对应有参构造第一种方式，下标赋值   -->
+<!--    <bean id="user" class="com.demo.pojo.User">-->
+<!--        <constructor-arg index="0" value="Ace by 有参数构造函数法1"/>-->
+<!--    </bean>-->
+
+    <!-- 对应有参构造第二种方式，类型匹配   -->
+<!--    <bean id="user" class="com.demo.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="Ace by 有参数构造函数法2"/>-->
+<!--    </bean>-->
+
+    <!-- 对应有参构造第三种方式，参数名匹配   -->
+    <bean id="user" class="com.demo.pojo.User">
+        <constructor-arg name="name" value="Ace by 有参数构造函数法3"/>
+    </bean>
+
+    <bean id="user2" class="com.demo.pojo.User2">
+        <constructor-arg name="name" value="Ace by 有参数构造函数法3"/>
+    </bean>
+</beans>
