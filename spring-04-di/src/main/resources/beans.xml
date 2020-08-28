@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="userBean.xml"/>
+
+    <bean id="address" class="com.demo.pojo.Address">
+        <property name="address" value="山水龙城"/>
+    </bean>
+
+    <bean id="student" class="com.demo.pojo.Student">
+        <!-- 第一种基础数据类型注入，value-->
+        <property name="name" value="Ace"/>
+
+        <!-- 第二种，Bean注入，ref -->
+        <property name="address" ref="address"/>
+
+        <!-- 数组注入 -->
+        <property name="books">
+            <array>
+                <value>深入理解Java虚拟机</value>
+                <value>Java并发编程的艺术</value>
+                <value>Java8实战</value>
+                <value>Maven实战</value>
+            </array>
+        </property>
+
+        <!-- List注入 -->
+        <property name="hobbies">
+            <list>
+                <value>写代码</value>
+                <value>篮球</value>
+                <value>游戏</value>
+            </list>
+        </property>
+
+        <!-- Map注入 -->
+        <property name="cards">
+            <map>
+                <entry key="招行卡" value="1"/>
+                <entry key="中行卡" value="2"/>
+            </map>
+        </property>
+
+        <!-- Set注入 -->
+        <property name="games">
+            <set>
+                <value>dota2</value>
+                <value>dnf</value>
+            </set>
+        </property>
+
+        <!-- 空字符串注入 -->
+        <property name="wife" value=""/>
+
+        <!-- null注入 -->
+        <property name="girlFriend">
+            <null/>
+        </property>
+
+        <!-- Properties注入 -->
+        <property name="info">
+            <props>
+                <prop key="driver">123</prop>
+                <prop key="url">www</prop>
+                <prop key="username">Ace</prop>
+                <prop key="password">123</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
