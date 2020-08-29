@@ -6,7 +6,7 @@
 
     <import resource="userBean.xml"/>
 
-    <bean id="address" class="com.demo.pojo.Address">
+    <bean id="address" class="com.demo.pojo.Address" scope="singleton">
         <property name="address" value="山水龙城"/>
     </bean>
 
